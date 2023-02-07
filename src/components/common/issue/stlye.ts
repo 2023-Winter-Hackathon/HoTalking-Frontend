@@ -8,7 +8,6 @@ export const IssueContainer = styled.div`
   align-items: center;
 
   margin-left: 87px;
-  margin-top: 28px;
 
   background: linear-gradient(
     91.05deg,
