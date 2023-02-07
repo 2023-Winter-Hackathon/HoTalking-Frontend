@@ -8,10 +8,6 @@ const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
       font-family: 'Pretendard' !important;
     }
-    #root{
-      height: 100vh;
-      padding-top: 56px;
-    }
     ${reset}
 `;
 
