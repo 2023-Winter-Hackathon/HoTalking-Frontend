@@ -9,3 +9,5 @@ export const useCreateIssueMutation = () => {
 
   return mutation;
 };
+
+export const useGetIssueMutation;
