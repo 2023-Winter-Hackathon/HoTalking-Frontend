@@ -1,6 +1,6 @@
 import { HomeItemThumbnail, HomeItemTitle, HomeItemWrap } from "./style";
 
-const HomeItem = () => {
+const HomeItem = ({ data }: any) => {
   return (
     <HomeItemWrap>
       <HomeItemThumbnail />

@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { customAxios } from "../../../lib/axios/customAxios";
 import { useGetIssueQuery } from "../../../queries/issue/issue.query";
-import { IssueContainer, IssueInfo, IssueTitle, IssueWriter } from "./stlye";
+import IssueDelBtn from "./issueDelBtn";
+import {
+  IssueContainer,
+  IssueInfo,
+  IssueLeftWrap,
+  IssueRightWrap,
+  IssueTitle,
+  IssueWriter,
+} from "./stlye";
 
 const Issue = () => {
   const [getData, setData] = useState<{ issueName: string }>({ issueName: "" });
@@ -15,9 +23,14 @@ const Issue = () => {
   }, []);
   return (
     <IssueContainer>
-      <IssueTitle>issue 🔥</IssueTitle>
-      <IssueInfo>{getData.issueName}</IssueInfo>
-      <IssueWriter>작성자: 백승하</IssueWriter>
+      <IssueRightWrap>
+        <IssueTitle>issue 🔥</IssueTitle>
+        <IssueInfo>{getData.issueName}</IssueInfo>
+      </IssueRightWrap>
+      <IssueLeftWrap>
+        <IssueDelBtn />
+        <IssueWriter>작성자: 백승하</IssueWriter>
+      </IssueLeftWrap>
     </IssueContainer>
   );
 };

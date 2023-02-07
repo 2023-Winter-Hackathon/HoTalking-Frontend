@@ -5,9 +5,8 @@ export const IssueContainer = styled.div`
   height: 96px;
 
   display: flex;
-  position: relative;
   align-items: center;
-
+  justify-content: space-between;
   margin-left: 87px;
 
   background: linear-gradient(
@@ -18,6 +17,18 @@ export const IssueContainer = styled.div`
   );
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 100px;
+`;
+
+export const IssueRightWrap = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`;
+
+export const IssueLeftWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
 `;
 
 export const IssueTitle = styled.h1`
@@ -44,8 +55,5 @@ export const IssueWriter = styled.p`
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
-
-  position: absolute;
-  left: 580px;
-  top: 72px;
+  margin-right: 33px;
 `;

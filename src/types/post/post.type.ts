@@ -15,6 +15,6 @@ export interface PostItem {
   title: "string";
 }
 
-export interface PostResponse extends Response {
+export interface PostResponse {
   data: PostItem[];
 }

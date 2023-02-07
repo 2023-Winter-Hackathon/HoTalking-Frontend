@@ -8,7 +8,7 @@ import { useGetPostsQuery } from "../../queries/post/post.query";
 
 const Home = () => {
   const { data } = useGetPostsQuery();
-  console.log(data);
+  console.log(data?.data);
 
   return (
     <HomeContainer>
@@ -18,9 +18,10 @@ const Home = () => {
       </HomeTopContainer>
       <HomeDropDown />
       <HomeItemContainer>
-        {Array.from({ length: 8 }).map((_, idx) => (
-          <HomeItem key={`${idx}개`} />
-        ))}
+        {data &&
+          (data?.map((v: any) => (
+            <HomeItem key={`${v}개`} data={v} />
+          )) as any[])}
       </HomeItemContainer>
     </HomeContainer>
   );
