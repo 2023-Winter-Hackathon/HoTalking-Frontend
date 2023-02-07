@@ -1,5 +1,4 @@
 import * as S from "./style";
-import { AiOutlineSearch } from "react-icons/ai";
 import logo from "./../.././../assets/logo/logo.svg";
 import config from "../../../config/config.json";
 import { useNavigate } from "react-router-dom";
