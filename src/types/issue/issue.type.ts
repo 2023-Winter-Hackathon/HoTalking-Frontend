@@ -1,3 +1,3 @@
 export interface IssueResponse {
-  test: null;
+  issueName: string;
 }

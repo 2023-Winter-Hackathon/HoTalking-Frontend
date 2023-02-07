@@ -1,4 +1,5 @@
 import React from "react";
+import { useGetIssueQuery } from "../../../queries/issue/issue.query";
 import { IssueContainer, IssueInfo, IssueTitle, IssueWriter } from "./stlye";
 
 const Issue = () => {
