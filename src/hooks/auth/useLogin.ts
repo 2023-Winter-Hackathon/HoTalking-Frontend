@@ -9,10 +9,10 @@ const useLogin = () => {
   const query = queryString.parse(search);
   const navigate = useNavigate();
   const request = useCallback(async () => {
-    // try {
-    //   // const { accessToken } = await authRepository.login({
-    //     code: query.code as string,
-    //   });
+    try {
+      const { accessToken } = await authRepository.login({
+        code: query.code as string,
+      });
       localStorage.setItem(ACCESS_KEY, accessToken);
       navigate("/");
     } catch (error) {
