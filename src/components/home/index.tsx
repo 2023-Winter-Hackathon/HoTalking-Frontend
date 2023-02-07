@@ -1,7 +1,9 @@
 import React from "react";
 import IssueInput from "../teacher/issueInput";
 import Issue from "../common/issue";
-import { HomeContainer, HomeTopContainer } from "./style";
+import { HomeContainer, HomeItemContainer, HomeTopContainer } from "./style";
+import HomeDropDown from "./homeDropDown";
+import HomeItem from "./homeItem";
 
 const Home = () => {
   return (
@@ -10,6 +12,12 @@ const Home = () => {
         <Issue />
         <IssueInput />
       </HomeTopContainer>
+      <HomeDropDown />
+      <HomeItemContainer>
+        {Array.from({ length: 8 }).map((_, idx) => (
+          <HomeItem />
+        ))}
+      </HomeItemContainer>
     </HomeContainer>
   );
 };

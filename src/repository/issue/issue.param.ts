@@ -1,4 +1,3 @@
-export interface issueParam {
+export interface createissueParam {
   issueName: string;
-  period: string;
 }

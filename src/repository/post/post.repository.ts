@@ -9,6 +9,8 @@ class PostRepository {
   public async deletePostById({ id }: deletePostByIdParam): Promise<void> {
     await customAxios.post(`/post/delete/${id}`);
   }
+
+  // public async getPosts(): Promise<
 }
 
 export default new PostRepository();

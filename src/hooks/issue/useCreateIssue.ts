@@ -1,30 +1,36 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
-import { QueryClient } from "react-query";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { useQueryClient } from "react-query";
 import { useCreateIssueMutation } from "../../queries/issue/issue.query";
-const Issue = () => {
-  const [issue, setIssue] = useState("");
+
+const useGetIssue = () => {
+  const queryClient = useQueryClient();
+
   const createIssueMutation = useCreateIssueMutation();
 
+  const [issueName, setIssueName] = useState("");
+
   const onChangeText = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setIssue((prev) => ({ ...prev, [name]: value }));
+    const { value } = e.target;
+    console.log(value);
+
+    setIssueName(value);
   };
 
   const onSubmitTodo = async (e: FormEvent) => {
-    const data = issue;
     e.preventDefault();
 
     createIssueMutation.mutateAsync(
-      { data },
+      { issueName },
       {
         onSuccess: () => {
-          setIssue("");
-          QueryClient.invalidateQueries("todo/useGetTodosQuery");
+          setIssueName("");
+          queryClient.invalidateQueries("issue/useGetIssueQuery");
         },
       }
     );
   };
-  return { setIssue, onChangeText };
+
+  return { issueName, onChangeText, onSubmitTodo };
 };
 
-export default Issue;
+export default useGetIssue;
