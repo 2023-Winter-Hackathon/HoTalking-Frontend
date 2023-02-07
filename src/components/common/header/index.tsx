@@ -2,12 +2,17 @@ import * as S from "./style";
 import { AiOutlineSearch } from "react-icons/ai";
 import logo from "./../.././../assets/logo/logo.svg";
 import config from "../../../config/config.json";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   const authUrl = `http://dauth.b1nd.com/login?client_id=${config.clientId}&redirect_uri=http://localhost:3000/callback`;
   return (
     <S.HeadContainer>
-      <S.HeadContants1>
+      <S.HeadContants1
+        onClick={() => navigate("/")}
+        style={{ cursor: "pointer" }}
+      >
         <S.HeadLogo src={logo} alt="뉴진스" />
         <S.HeadTitle>
           Ho
