@@ -2,8 +2,8 @@ import { customAxios } from "../../lib/axios/customAxios";
 import { deletePostByIdParam, PostParam } from "./post.param";
 
 class PostRepository {
-  public async createPost({ content, title }: PostParam): Promise<void> {
-    await customAxios.post("/post/create", { content, title });
+  public async createPost({ formData }: PostParam): Promise<void> {
+    await customAxios.post("/post/create", { formData });
   }
 
   public async deletePostById({ id }: deletePostByIdParam): Promise<void> {

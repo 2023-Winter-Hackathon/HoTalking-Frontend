@@ -104,4 +104,5 @@ export const WriteSubmitBtn = styled.button`
     border:none;
     box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.05);
     cursor: pointer;
+    font-size:20px;
 `;
