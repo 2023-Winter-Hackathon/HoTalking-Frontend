@@ -5,6 +5,7 @@ export const IssueContainer = styled.div`
   height: 96px;
 
   display: flex;
+  position: relative;
   align-items: center;
 
   margin-left: 87px;
@@ -44,6 +45,7 @@ export const IssueWriter = styled.p`
   font-size: 15px;
   line-height: 18px;
 
-  padding-left: 110px;
-  margin-top: 72px;
+  position: absolute;
+  left: 580px;
+  top: 72px;
 `;

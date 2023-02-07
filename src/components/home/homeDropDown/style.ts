@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HomeScheduleSideBarHeaderDropdownContainer = styled.div`
   width: 100px;
-  height: 30px;
+  height: 40px;
   color: black;
   display: flex;
   align-items: center;
@@ -11,14 +11,17 @@ export const HomeScheduleSideBarHeaderDropdownContainer = styled.div`
   margin-left: 97px;
   margin-top: 20px;
   padding: 0px 5px;
-  background: none;
   position: relative;
   cursor: pointer;
-  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
   box-sizing: border-box;
-  border: 1px solid black;
-  background-color: white;
   font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `;
 
 export const HomeScheduleSideBarHeaderDropdownIcon = styled.div<{
@@ -41,7 +44,7 @@ export const HomeScheduleSideBarHeaderDropdownWrap = styled.div`
   left: -1px;
   border: 1px solid ${({ theme }) => theme.borderColor};
   box-sizing: border-box;
-  background-color: ${({ theme }) => theme.backgroundColor4};
+  background-color: #ffffff;
   border-radius: 5px;
   overflow: hidden;
 `;
