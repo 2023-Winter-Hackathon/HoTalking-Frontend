@@ -4,7 +4,8 @@ import Header from "../components/common/header";
 function Router() {
   return (
     <>
-      <Routes> </Routes>
+      <Header/>
+      <Routes></Routes>
     </>
   );
 }
