@@ -1,4 +1,4 @@
 {
-  "server": "http://221.168.22.204:8080/api",
+  "server": "http://10.80.162.138:8080/api",
   "clientId": "af1bb52400164cf8aa4258e5dcfd7acabb481399210d48bb8c4e8e85226f4c78"
 }
