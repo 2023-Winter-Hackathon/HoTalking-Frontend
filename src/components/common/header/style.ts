@@ -43,6 +43,7 @@ export const HeadLogin = styled.div`
     align-items: center;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 `;
 
 export const HeadSearch = styled(AiOutlineSearch)`
