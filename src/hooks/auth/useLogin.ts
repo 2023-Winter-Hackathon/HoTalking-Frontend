@@ -10,10 +10,10 @@ const useLogin = () => {
   const navigate = useNavigate();
   const request = useCallback(async () => {
     try {
-      const { accessToken } = await authRepository.login({
+      const { token } = await authRepository.login({
         code: query.code as string,
       });
-      localStorage.setItem(ACCESS_KEY, accessToken);
+      localStorage.setItem(ACCESS_KEY, token);
       navigate("/");
     } catch (error) {
       console.log(error);

@@ -8,6 +8,7 @@ class AuthRepository {
     const { data } = await axios.post(`${config.server}/auth/login/dauth`, {
       code,
     });
+
     return data;
   }
 }
