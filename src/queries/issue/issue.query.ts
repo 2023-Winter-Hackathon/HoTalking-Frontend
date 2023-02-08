@@ -1,4 +1,5 @@
-import { useMutation, useQuery } from "react-query";
+import { AxiosError } from "axios";
+import { useMutation, useQuery, UseQueryOptions } from "react-query";
 import {
   createissueParam,
   deleteIssueParam,
@@ -13,9 +14,11 @@ export const useCreateIssueMutation = () => {
   return mutation;
 };
 
-export const useGetIssueQuery = () => {
-  useQuery(["issue/useGetIssueQuery"], () => issueRepository.getIssue());
-};
+export const useGetIssueQuery = () =>
+  useQuery("issue/useGetIssueQuery", () => issueRepository.getIssue(), {
+    cacheTime: 1000 * 60 * 5,
+    staleTime: 1000 * 60,
+  });
 
 export const useDeleteIssueMutation = () => {
   const mutation = useMutation(({ id }: deleteIssueParam) =>

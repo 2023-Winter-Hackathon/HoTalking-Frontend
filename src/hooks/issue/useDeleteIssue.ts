@@ -2,17 +2,17 @@ import { useQueryClient } from "react-query";
 import { useDeleteIssueMutation } from "../../queries/issue/issue.query";
 
 interface Props {
-  todoId: string;
+  issueId: string;
 }
 
-const useDeleteTodo = ({ todoId }: Props) => {
+const useDeleteTodo = ({ issueId }: Props) => {
   const queryClient = useQueryClient();
 
   const deleteIssueMutation = useDeleteIssueMutation();
 
   const onDelete = async () => {
     deleteIssueMutation.mutate(
-      { id: todoId },
+      { id: issueId },
       {
         onSuccess: () => {
           queryClient.invalidateQueries("todo/useGetTodosQuery");

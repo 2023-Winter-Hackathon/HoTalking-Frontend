@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { HomeItemThumbnail, HomeItemTitle, HomeItemWrap } from "./style";
-
+import config from "../../../config/config.json";
 interface Props {
   author: string;
   id: string;
@@ -12,7 +12,7 @@ interface Props {
 const HomeItem = ({ author, id, title, onClick }: Props) => {
   return (
     <HomeItemWrap onClick={onClick}>
-      <HomeItemThumbnail />
+      <HomeItemThumbnail src={`${config.server}/post/images/${id}`} />
       <HomeItemBottom>
         <HomeItemTitle>{title}</HomeItemTitle>
         <HomeItemAuthor>{author}</HomeItemAuthor>

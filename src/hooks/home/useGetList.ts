@@ -11,7 +11,7 @@ const useHomePost = () => {
 
   const { data: PostsData } = useGetPostsQuery()!;
   const { data: memberData } = useGetMember();
-  console.log();
+  console.log(memberData);
 
   const loadParentPost = () => {
     setPost(
