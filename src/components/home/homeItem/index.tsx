@@ -1,10 +1,16 @@
 import { HomeItemThumbnail, HomeItemTitle, HomeItemWrap } from "./style";
 
-const HomeItem = ({ data }: any) => {
+interface Props {
+  author: string;
+  id: string;
+  title: string;
+}
+
+const HomeItem = ({ author, id, title }: Props) => {
   return (
     <HomeItemWrap>
       <HomeItemThumbnail />
-      <HomeItemTitle>뉴진스 강해린</HomeItemTitle>
+      <HomeItemTitle></HomeItemTitle>
     </HomeItemWrap>
   );
 };

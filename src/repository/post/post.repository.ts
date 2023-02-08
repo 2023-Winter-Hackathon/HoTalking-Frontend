@@ -11,7 +11,7 @@ class PostRepository {
     await customAxios.post(`/post/delete/${id}`);
   }
 
-  public async getPosts(): Promise<PostResponse> {
+  public async getPosts(): Promise<PostResponse[]> {
     const { data } = await customAxios.get("/post/list");
     return data;
   }
