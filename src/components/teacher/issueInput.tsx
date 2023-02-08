@@ -1,8 +1,10 @@
+import { useRecoilState } from "recoil";
 import useGetIssue from "../../hooks/issue/useCreateIssue";
 import { IssueFormBtn, IssueInputContianer, IssueInputInput } from "./style";
 
 const IssueInput = () => {
   const { issueName, onChangeText, onSubmitTodo } = useGetIssue();
+
   return (
     <form onSubmit={onSubmitTodo}>
       <IssueInputContianer>

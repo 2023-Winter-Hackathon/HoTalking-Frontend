@@ -5,11 +5,12 @@ interface Props {
   author: string;
   id: string;
   title: string;
+  onClick: () => void;
 }
 
-const HomeItem = ({ author, id, title }: Props) => {
+const HomeItem = ({ author, id, title, onClick }: Props) => {
   return (
-    <HomeItemWrap>
+    <HomeItemWrap onClick={onClick}>
       <HomeItemThumbnail />
       <HomeItemBottom>
         <HomeItemTitle>{title}</HomeItemTitle>

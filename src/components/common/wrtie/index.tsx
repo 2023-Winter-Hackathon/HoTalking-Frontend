@@ -5,7 +5,6 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { customAxios } from "../../../lib/axios/customAxios";
 import "@splidejs/react-splide/css";
 import { useNavigate } from "react-router-dom";
-import { ACCESS_KEY } from "../../../constants/token/token.constant";
 
 const Write = () => {
   const [title, SetTitle] = useState<string>("");
@@ -59,6 +58,7 @@ const Write = () => {
       window.alert("제대로 입력해주세요!");
     }
   };
+
   return(
     <S.WriteContainer>
       <style>{"body{background-color:#F9F9F9}"}</style>
