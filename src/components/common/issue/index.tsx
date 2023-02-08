@@ -20,7 +20,6 @@ const Issue = () => {
       </IssueRightWrap>
       <IssueLeftWrap>
         <IssueDelBtn />
-        <IssueWriter>작성자: 백승하</IssueWriter>
       </IssueLeftWrap>
     </IssueContainer>
   );

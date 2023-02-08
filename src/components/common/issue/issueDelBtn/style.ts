@@ -10,5 +10,5 @@ export const IssueDelBtnContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  margin-top: 20px;
+  margin-right: 40px;
 `;
