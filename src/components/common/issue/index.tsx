@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { customAxios } from "../../../lib/axios/customAxios";
+import { useGetIssueQuery } from "../../../queries/issue/issue.query";
 import IssueDelBtn from "./issueDelBtn";
 import {
   IssueContainer,
@@ -11,24 +12,14 @@ import {
 } from "./stlye";
 
 const Issue = () => {
-  const [getData, setData] = useState<{ issueName: string }>({ issueName: "" });
-  const GetData = async () => {
-    const { data } = await customAxios.get("/issue/get");
-    setData(data);
-  };
-  useEffect(() => {
-    GetData();
-  }, []);
-
   return (
     <IssueContainer>
       <IssueRightWrap>
         <IssueTitle>issue 🔥</IssueTitle>
-        <IssueInfo>{getData.issueName}</IssueInfo>
+        <IssueInfo></IssueInfo>
       </IssueRightWrap>
       <IssueLeftWrap>
         <IssueDelBtn />
-        <IssueWriter>작성자: 백승하</IssueWriter>
       </IssueLeftWrap>
     </IssueContainer>
   );

@@ -3,7 +3,8 @@ import { useState } from "react";
 import logo from "./../.././../assets/logo/logo.svg";
 import config from "../../../config/config.json";
 import { useNavigate } from "react-router-dom";
-import profile from '.././.././../assets/profile/profile.svg'
+import profile from ".././.././../assets/profile/profile.svg";
+import { ACCESS_KEY } from "../../../constants/token/token.constant";
 export default function Header() {
   const navigate = useNavigate();
   const authUrl = `http://dauth.b1nd.com/login?client_id=${config.clientId}&redirect_uri=http://localhost:3000/callback`;
@@ -25,10 +26,16 @@ export default function Header() {
       </S.HeadContants1>
 
       <S.HeadContants2>
-        <S.HeadSearch style={{ marginRight: "21px" }}/>
-        <S.HeadWrite onClick={()=>navigate('/write')}>글 작성하기</S.HeadWrite>
-        <S.HeadLogin onClick={() => (window.location.href = authUrl)}>로그인</S.HeadLogin>
-        <S.HeadProfile src={profile} onClick={()=>navigate('/myinfo')}/>
+        <S.HeadSearch style={{ marginRight: "21px" }} />
+        <S.HeadWrite onClick={() => navigate("/write")}>
+          글 작성하기
+        </S.HeadWrite>
+        {localStorage.getItem(ACCESS_KEY) ? null : (
+          <S.HeadLogin onClick={() => (window.location.href = authUrl)}>
+            로그인
+          </S.HeadLogin>
+        )}
+        <S.HeadProfile src={profile} onClick={() => navigate("/myinfo")} />
       </S.HeadContants2>
     </S.HeadContainer>
   );
