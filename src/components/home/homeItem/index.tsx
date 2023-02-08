@@ -12,7 +12,7 @@ interface Props {
 const HomeItem = ({ author, id, title, onClick }: Props) => {
   return (
     <HomeItemWrap onClick={onClick}>
-      <HomeItemThumbnail src={`${config.server}/post/images/${id}`} />
+      <HomeItemThumbnail src={`${config.server}/post/images/${id}`} alt="" />
       <HomeItemBottom>
         <HomeItemTitle>{title}</HomeItemTitle>
         <HomeItemAuthor>{author}</HomeItemAuthor>

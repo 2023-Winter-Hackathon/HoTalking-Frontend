@@ -20,7 +20,7 @@ const Home = () => {
       </HomeTopContainer>
       <HomeDropDown />
       <HomeItemContainer>
-        {data?.map((item) => (
+        {post?.map((item) => (
           <HomeItem onClick={() => navigate(`/detail/${item.id}`)} {...item} />
         ))}
       </HomeItemContainer>

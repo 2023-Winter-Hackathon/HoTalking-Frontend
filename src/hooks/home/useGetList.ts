@@ -11,26 +11,13 @@ const useHomePost = () => {
 
   const { data: PostsData } = useGetPostsQuery()!;
   const { data: memberData } = useGetMember();
-  console.log(memberData);
 
   const loadParentPost = () => {
-    setPost(
-      PostsData?.filter(
-        (post) =>
-          post.role.indexOf(String(memberData?.role)) > -1 ||
-          post.role === "선배"
-      )!
-    );
+    setPost(PostsData?.filter((post) => post.role === "선배")!);
   };
 
   const loadJuniorPost = () => {
-    setPost(
-      PostsData?.filter(
-        (post) =>
-          post.role.indexOf(String(memberData?.role)) > -1 ||
-          post.role === "후배"
-      )!
-    );
+    setPost(PostsData?.filter((post) => post.role === "후배")!);
   };
 
   const loadAllPost = () => {
@@ -60,6 +47,10 @@ const useHomePost = () => {
         break;
     }
   };
+
+  useEffect(() => {
+    console.log(post);
+  }, [post]);
 
   useEffect(() => {
     if (PostsData) {

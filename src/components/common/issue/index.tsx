@@ -12,6 +12,10 @@ import {
 } from "./stlye";
 
 const Issue = () => {
+  const { data } = useGetIssueQuery();
+
+  console.log(data);
+
   return (
     <IssueContainer>
       <IssueRightWrap>

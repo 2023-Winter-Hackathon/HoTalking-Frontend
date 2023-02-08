@@ -1,5 +1,4 @@
-import { AxiosError } from "axios";
-import { useMutation, useQuery, UseQueryOptions } from "react-query";
+import { useMutation, useQuery } from "react-query";
 import {
   createissueParam,
   deleteIssueParam,
