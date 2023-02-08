@@ -9,7 +9,6 @@ import useHomePost from "../../hooks/home/useGetList";
 
 const Home = () => {
   const { post } = useHomePost();
-  console.log(post);
 
   return (
     <HomeContainer>
