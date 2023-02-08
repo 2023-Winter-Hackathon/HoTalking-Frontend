@@ -13,17 +13,27 @@ const useHomePost = () => {
   const { data: memberData } = useGetMember();
   console.log();
 
-  const loadMyGradeSchedules = () => {
+  const loadParentPost = () => {
     setPost(
       PostsData?.filter(
         (post) =>
           post.role.indexOf(String(memberData?.role)) > -1 ||
-          post.role === "전교생"
+          post.role === "선배"
       )!
     );
   };
 
-  const loadAllSchedules = () => {
+  const loadJuniorPost = () => {
+    setPost(
+      PostsData?.filter(
+        (post) =>
+          post.role.indexOf(String(memberData?.role)) > -1 ||
+          post.role === "후배"
+      )!
+    );
+  };
+
+  const loadAllPost = () => {
     setPost(PostsData);
   };
 
@@ -31,13 +41,16 @@ const useHomePost = () => {
     setPost([]);
 
     switch (scope) {
-      case "전체 일정":
-        loadAllSchedules();
+      case "전체":
+        loadAllPost();
         break;
 
-      case "내 일정":
-        loadMyGradeSchedules();
+      case "선배":
+        loadParentPost();
         break;
+
+      case "후배":
+        loadJuniorPost();
 
       default:
         loadAllSchedules();
@@ -46,10 +59,10 @@ const useHomePost = () => {
   };
 
   useEffect(() => {
-    if (schedulesData?.data) {
+    if (PostsData) {
       handleSchedules(classificationKeyword);
     }
-  }, [schedulesData?.data, classificationKeyword]);
+  }, [PostsData, classificationKeyword]);
 
   return {
     post,
