@@ -4,6 +4,7 @@ import { HomeItemThumbnail, HomeItemTitle, HomeItemWrap } from "./style";
 interface Props {
   author: string;
   id: string;
+  role: string;
   title: string;
   onClick: () => void;
 }

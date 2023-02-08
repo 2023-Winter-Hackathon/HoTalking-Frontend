@@ -1,5 +1,8 @@
 import { useMutation, useQuery } from "react-query";
-import { createissueParam } from "../../repository/issue/issue.param";
+import {
+  createissueParam,
+  deleteIssueParam,
+} from "../../repository/issue/issue.param";
 import issueRepository from "../../repository/issue/issue.repository";
 
 export const useCreateIssueMutation = () => {
@@ -13,4 +16,11 @@ export const useCreateIssueMutation = () => {
 export const useGetIssueQuery = () => {
   useQuery(["issue/useGetIssueQuery"], () => issueRepository.getIssue());
 };
- 
+
+export const useDeleteIssueMutation = () => {
+  const mutation = useMutation(({ id }: deleteIssueParam) =>
+    issueRepository.deleteIssueById({ id })
+  );
+
+  return mutation;
+};
