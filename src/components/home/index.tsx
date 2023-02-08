@@ -5,10 +5,11 @@ import { HomeContainer, HomeItemContainer, HomeTopContainer } from "./style";
 import HomeDropDown from "./homeDropDown";
 import HomeItem from "./homeItem";
 import { useGetPostsQuery } from "../../queries/post/post.query";
+import useHomePost from "../../hooks/home/useGetList";
 
 const Home = () => {
-  const { data } = useGetPostsQuery();
-  console.log(data);
+  const { post } = useHomePost();
+  console.log(post);
 
   return (
     <HomeContainer>
@@ -18,7 +19,7 @@ const Home = () => {
       </HomeTopContainer>
       <HomeDropDown />
       <HomeItemContainer>
-        {data?.map((item) => (
+        {post?.map((item) => (
           <HomeItem {...item} />
         ))}
       </HomeItemContainer>

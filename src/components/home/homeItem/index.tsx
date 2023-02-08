@@ -4,10 +4,11 @@ import { HomeItemThumbnail, HomeItemTitle, HomeItemWrap } from "./style";
 interface Props {
   author: string;
   id: string;
+  role: string;
   title: string;
 }
 
-const HomeItem = ({ author, id, title }: Props) => {
+const HomeItem = ({ author, id, role, title }: Props) => {
   return (
     <HomeItemWrap>
       <HomeItemThumbnail />
