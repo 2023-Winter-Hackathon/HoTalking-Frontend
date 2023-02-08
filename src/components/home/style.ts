@@ -6,6 +6,7 @@ export const HomeContainer = styled.div`
 
   padding-top: 56px;
   background-color: #f9f9f9;
+  min-height: 100vh;
 `;
 
 export const HomeTopContainer = styled.div`

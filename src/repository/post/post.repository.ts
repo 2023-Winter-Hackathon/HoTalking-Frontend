@@ -1,5 +1,5 @@
 import { customAxios } from "../../lib/axios/customAxios";
-import { PostResponse } from "../../types/post/post.type";
+import { PostItem, PostResponse } from "../../types/post/post.type";
 import { deletePostByIdParam, PostParam } from "./post.param";
 
 class PostRepository {
@@ -11,7 +11,7 @@ class PostRepository {
     await customAxios.post(`/post/delete/${id}`);
   }
 
-  public async getPosts(): Promise<PostResponse[]> {
+  public async getPosts(): Promise<PostItem[]> {
     const { data } = await customAxios.get("/post/list");
     return data;
   }

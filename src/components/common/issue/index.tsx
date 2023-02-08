@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { customAxios } from "../../../lib/axios/customAxios";
-import { useGetIssueQuery } from "../../../queries/issue/issue.query";
 import IssueDelBtn from "./issueDelBtn";
 import {
   IssueContainer,
@@ -15,12 +14,12 @@ const Issue = () => {
   const [getData, setData] = useState<{ issueName: string }>({ issueName: "" });
   const GetData = async () => {
     const { data } = await customAxios.get("/issue/get");
-    console.log(data);
     setData(data);
   };
   useEffect(() => {
     GetData();
   }, []);
+
   return (
     <IssueContainer>
       <IssueRightWrap>

@@ -21,9 +21,12 @@ export const HomeItemThumbnail = styled.img`
 `;
 
 export const HomeItemTitle = styled.h2`
+  font-family: "Pretendard Variable";
+  font-style: normal;
   font-weight: 300;
   font-size: 20px;
   line-height: 24px;
+  /* identical to box height */
 
-  padding: 20px;
+  color: #000000;
 `;
