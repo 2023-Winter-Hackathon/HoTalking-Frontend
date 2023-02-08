@@ -39,6 +39,7 @@ export const DetailPicContainer = styled.div`
 export const DetailContentsContainer = styled.div`
     text-align: center;
     margin-left:45px;
+    position: relative;
 `;
 
 export const DetailContents = styled.div`
@@ -47,6 +48,20 @@ export const DetailContents = styled.div`
     /* background-color:white; */
     text-align:left;
     padding-top:13px;
+`;
+
+export const DeleteBtn = styled.button`
+    width: 69px;
+    height: 36px;
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+    background-color: #FF7777;
+    border-radius: 15px;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
 `;
 
 export const DetailPicture = styled.img`
