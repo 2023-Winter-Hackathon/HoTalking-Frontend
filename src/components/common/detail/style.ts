@@ -23,6 +23,38 @@ export const DetailBox = styled.div`
     gap: 5px;
 `;
 
+export const DetailTitle = styled.div`
+    margin-top:49px;
+    margin-left:43px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+`;
+
+export const DetailPicContainer = styled.div`
+    text-align: center;
+    margin-top:23px;
+`;
+
+export const DetailContentsContainer = styled.div`
+    text-align: center;
+    margin-left:45px;
+`;
+
+export const DetailContents = styled.div`
+    width:800px;
+    height:200px;
+    /* background-color:white; */
+    text-align:left;
+    padding-top:13px;
+`;
+
+export const DetailPicture = styled.img`
+    width: 800px;
+    height: 450px;
+    background-color:white;
+`
+
 export const DetailSidebar = styled.div`
     width: 309px;
     height: 780px;

@@ -48,4 +48,22 @@ export const HeadLogin = styled.div`
 export const HeadSearch = styled(AiOutlineSearch)`
   width: 29px;
   height: 28px;
+  cursor: pointer;
+`;
+
+export const HeadWrite = styled.div`
+  width: 100px;
+  height: 39px;
+  background: #ff7777;
+  border-radius: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+`;
+
+export const HeadProfile = styled.img`
+  width:60px;
+  height:60px;
+  cursor: pointer;
 `;

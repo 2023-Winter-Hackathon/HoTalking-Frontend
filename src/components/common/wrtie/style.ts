@@ -85,6 +85,7 @@ export const WriteUploadContainer = styled.form`
 
 export const WriteUploadLabel = styled.label`
     margin-top:8px;
+    cursor: pointer;
 `;
 
 export const WriteUploadFile = styled.input`
