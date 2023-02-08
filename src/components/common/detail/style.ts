@@ -77,8 +77,11 @@ export const DetailCommentShowContainer = styled.div`
 export const DetailCommentShowBox = styled.div`
     width:287px;
     height: 530px;
-    background-color: #FFFFFF;
     margin-top:10px;
+`;
+
+export const DetailCommentli = styled.li`
+    line-height:20px;
 `;
 
 export const DetailCommentContainer = styled.div`

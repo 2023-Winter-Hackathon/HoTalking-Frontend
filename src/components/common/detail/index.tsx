@@ -12,6 +12,7 @@ export default function Detail(){
         .then((res) => {
             SetAricles(res.data);
             console.log(res.data);
+            console.log(res.data.comments[0].comment_author);
         })
         .catch(e=>console.log(e));
     }, [id])
@@ -54,9 +55,13 @@ export default function Detail(){
                 <S.DetailSidebar>
                     <S.DetailCommentShowContainer>
                         <S.DetailCommentShowBox>
-                            {
-                               
-                            }
+                            <ul>
+                                {
+                                    articles.comments && articles.comments.map((e:any)=>(
+                                        <S.DetailCommentli key={e.id}>{e.comment_author} : {e.comment}</S.DetailCommentli>
+                                    ))
+                                }
+                            </ul>
                         </S.DetailCommentShowBox>
                     </S.DetailCommentShowContainer>
 
