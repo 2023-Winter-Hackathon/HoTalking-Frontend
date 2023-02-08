@@ -34,7 +34,9 @@ const useHomePost = () => {
   };
 
   const loadAllPost = () => {
-    setPost(PostsData);
+    if (PostsData) {
+      setPost(PostsData);
+    }
   };
 
   const handleSchedules = (scope: string) => {
@@ -51,9 +53,10 @@ const useHomePost = () => {
 
       case "후배":
         loadJuniorPost();
+        break;
 
       default:
-        loadAllSchedules();
+        loadAllPost();
         break;
     }
   };
